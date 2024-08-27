@@ -8,14 +8,14 @@ import json
 # Initializes Pinecone
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 
-index_name = 'ratemyprof-hf'
+index_name = 'rag'
 
 # check if the hf-endpoints index exists
 if index_name not in pc.list_indexes():
     # create the index if it does not exist
     pc.create_index(
         index_name,
-        dimension=1024,
+        dimension=1536,
         metric="cosine"
     )
 
