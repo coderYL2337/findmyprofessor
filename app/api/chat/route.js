@@ -48,7 +48,7 @@ export async function POST(req) {
         apiKey: process.env.PINECONE_API_KEY,
       })
     const index = pc.index('rag').namespace('ns1')
-    const openai = new OpenAI()
+    const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY})
     const text = data[data.length - 1].content
     const embedding = await openai.embeddings.create({
         model: 'text-embedding-3-small',
