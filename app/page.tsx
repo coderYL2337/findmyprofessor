@@ -27,6 +27,9 @@ export default function Home() {
       },
       body: JSON.stringify([ ...messages, { role: 'user', content: message }]),
     }).then(async(res) => {
+      if (!res.body) {
+        throw new Error('Response body is null');
+      }
       const reader = res.body.getReader()
       const decoder = new TextDecoder()
       let result = ''
