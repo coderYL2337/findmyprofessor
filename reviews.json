@@ -1,0 +1,124 @@
+{
+    "reviews": [
+      {
+        "professor": "Dr. Emma Thompson",
+        "subject": "Biology",
+        "stars": 5,
+        "review": "Dr. Thompson's lectures are engaging and her passion for biology is contagious. Best professor I've had!"
+      },
+      {
+        "professor": "Prof. James Wilson",
+        "subject": "Mathematics",
+        "stars": 4,
+        "review": "Challenging course, but Prof. Wilson explains complex concepts clearly. Always available for extra help."
+      },
+      {
+        "professor": "Dr. Sophia Chen",
+        "subject": "Computer Science",
+        "stars": 5,
+        "review": "Dr. Chen's practical approach to teaching programming is excellent. Her projects are relevant and interesting."
+      },
+      {
+        "professor": "Prof. Michael Brown",
+        "subject": "History",
+        "stars": 3,
+        "review": "Prof. Brown knows his subject well, but lectures can be dry. More interactive sessions would help."
+      },
+      {
+        "professor": "Dr. Olivia Martinez",
+        "subject": "Psychology",
+        "stars": 5,
+        "review": "Dr. Martinez creates a supportive learning environment. Her research-based teaching approach is very effective."
+      },
+      {
+        "professor": "Prof. David Lee",
+        "subject": "Physics",
+        "stars": 4,
+        "review": "Prof. Lee's enthusiasm for physics is evident. Sometimes moves too quickly, but overall a great teacher."
+      },
+      {
+        "professor": "Dr. Sarah Johnson",
+        "subject": "English Literature",
+        "stars": 5,
+        "review": "Dr. Johnson's analysis of literary works is insightful. She encourages critical thinking and open discussion."
+      },
+      {
+        "professor": "Prof. Robert Taylor",
+        "subject": "Economics",
+        "stars": 3,
+        "review": "Prof. Taylor's lectures are informative, but could use more real-world examples to illustrate concepts."
+      },
+      {
+        "professor": "Dr. Emily White",
+        "subject": "Chemistry",
+        "stars": 4,
+        "review": "Dr. White's lab sessions are well-organized and educational. Her explanations make complex reactions understandable."
+      },
+      {
+        "professor": "Prof. Daniel Green",
+        "subject": "Philosophy",
+        "stars": 5,
+        "review": "Prof. Green's Socratic method of teaching is incredibly effective. He challenges students to think deeply."
+      },
+      {
+        "professor": "Dr. Lisa Wong",
+        "subject": "Sociology",
+        "stars": 4,
+        "review": "Dr. Wong brings sociological theories to life with current events. Her assignments are thought-provoking."
+      },
+      {
+        "professor": "Prof. Thomas Anderson",
+        "subject": "Art History",
+        "stars": 3,
+        "review": "Prof. Anderson is knowledgeable, but could improve on making the subject more engaging for non-majors."
+      },
+      {
+        "professor": "Dr. Maria Garcia",
+        "subject": "Environmental Science",
+        "stars": 5,
+        "review": "Dr. Garcia's field trips and hands-on approach make learning about the environment fascinating and relevant."
+      },
+      {
+        "professor": "Prof. John Smith",
+        "subject": "Political Science",
+        "stars": 4,
+        "review": "Prof. Smith encourages healthy debate and provides balanced views on complex political issues."
+      },
+      {
+        "professor": "Dr. Rachel Cohen",
+        "subject": "Neuroscience",
+        "stars": 5,
+        "review": "Dr. Cohen's lectures are captivating. She explains complex brain functions in an understandable way."
+      },
+      {
+        "professor": "Prof. Kevin O'Brien",
+        "subject": "Marketing",
+        "stars": 3,
+        "review": "Prof. O'Brien has industry experience, but his teaching style could be more dynamic and interactive."
+      },
+      {
+        "professor": "Dr. Amanda Foster",
+        "subject": "Geology",
+        "stars": 4,
+        "review": "Dr. Foster's enthusiasm for rocks is surprisingly contagious. Her lab sessions are particularly informative."
+      },
+      {
+        "professor": "Prof. Hiro Tanaka",
+        "subject": "International Relations",
+        "stars": 5,
+        "review": "Prof. Tanaka's global perspective and use of case studies make his classes extremely valuable and interesting."
+      },
+      {
+        "professor": "Dr. Fatima Al-Mansour",
+        "subject": "Astronomy",
+        "stars": 4,
+        "review": "Dr. Al-Mansour's stargazing sessions are a highlight. Her passion for the cosmos is truly inspiring."
+      },
+      {
+        "professor": "Prof. George Williams",
+        "subject": "Music Theory",
+        "stars": 3,
+        "review": "Prof. Williams is clearly an expert, but could work on making the material more accessible to beginners."
+      }
+    ]
+  }
