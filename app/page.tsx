@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { Box, Button, TextField, Stack, Typography, Container, Grid } from '@mui/material'
 import ProfessorReviews from './components/ProfessorReviews'
-import SchoolIcon from '@mui/icons-material/School' 
+import { School as SchoolIcon } from '@mui/icons-material'
 import styles from './page.module.css'
 
 export default function Home() {
