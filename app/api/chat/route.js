@@ -1,10 +1,27 @@
 import { NextResponse } from 'next/server'
 import { Pinecone } from '@pinecone-database/pinecone'
 import OpenAI from 'openai'
+import SchoolIcon from '@mui/icons-material/School' // Import the School icon
+
+// const systemPrompt = `
+// You are a knowledgeable and helpful agent designed to assist students in finding the best professors based on their specific queries. You have access to a database containing detailed reviews of professors across various subjects. Your goal is to provide students with the top 3 professors who best match their criteria, based on reviews, ratings, and other relevant factors.
+
+// IMPORTANT: Only recommend professors from the provided reviews data. Do not suggest or mention any professors that are not in this dataset.
+
+// Instructions:
+
+// 1. Use ONLY the information provided in the reviews data to answer queries.
+// 2. If a query asks for a professor or subject not in the reviews data, politely inform the user that you don't have information on that specific professor or subject.
+// 3. When recommending professors, always include their name, subject, star rating, and a brief summary of their review.
+// 4. If there are no exact matches for a query, suggest the closest alternatives from the available data.
+
+// Remember, your knowledge is limited to the reviews provided. Do not make up or assume information about professors or subjects not in the dataset.
+// `
 
 const systemPrompt = `
 You are a knowledgeable and helpful agent designed to assist students in finding the best professors based on their specific queries. You have access to a database containing detailed reviews of professors across various subjects. Your goal is to provide students with the top 3 professors who best match their criteria, based on reviews, ratings, and other relevant factors.
 
+IMPORTANT: Only recommend professors from the provided reviews data. Do not suggest or mention any professors that are not in this dataset.
 Instructions:
 
 Input Handling:
@@ -41,14 +58,20 @@ Dr. Emma Thompson - Biology (5 stars): 'Dr. Thompson's lectures are engaging and
 Dr. Olivia Martinez - Psychology (5 stars): 'Dr. Martinez creates a supportive learning environment. Her research-based teaching approach is very effective.'
 Prof. Hiro Tanaka - International Relations (5 stars): 'Prof. Tanaka's global perspective and use of case studies make his classes extremely valuable and interesting.'"
 
+Remember, your knowledge is limited to the reviews provided. Do not make up or assume information about professors or subjects not in the dataset.
+
 `
 export async function POST(req) {
     const data = await req.json()
+    if (data.action === 'clear') {
+      return NextResponse.json({ message: 'Chat history cleared' })
+  }
     const pc = new Pinecone({
         apiKey: process.env.PINECONE_API_KEY,
       }) 
     const index = pc.index('rag').namespace('ns1')
     const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY,})
+    
     const text = data[data.length - 1].content
     const embedding = await openai.embeddings.create({
         model: 'text-embedding-3-small',

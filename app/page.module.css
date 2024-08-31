@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.cuteTitle {
+  font-family: 'Fredoka One', cursive !important;
+  color: #8B4513 !important; /* Brown color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: limitedBounce 2s ease-in-out;
+  font-weight: 400 !important; /* Less bold */
+}
+
+.titleIcon {
+  font-size: 3rem !important;
+  color: #8B4513 !important; /* Brown color */
+  margin-right: 1rem;
+  animation: limitedBounce 2s ease-in-out;
+}
+
+@keyframes limitedBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.reviewsColumn {
+  height: 700px;
+  overflow-y: auto;
+}
+
+.reviewsTitle {
+  margin-top: -0.5rem; /* Adjust this value to move the reviews title up */
+}
+
+@media (max-width: 960px) {
+  .reviewsColumn {
+    height: auto;
+    max-height: 700px;
+  }
+  
+  .reviewsTitle {
+    margin-top: 0; /* Reset for mobile view */
+  }
+}
